@@ -49,7 +49,7 @@ Here’s how you can run the project locally and see the magic happen! 🎩✨
 
 I’ve deployed this project on Vercel for easy viewing. Check it out live here:
 
-[**View Live Project**](https://your-project-link.vercel.app)
+[**View Live Project**](https://brinte-gamma.vercel.app/)
 
 ## 📝 What to Look For
 
