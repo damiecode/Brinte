@@ -15,7 +15,7 @@ import TextArea from 'antd/es/input/TextArea';
 import { useState } from 'react';
 
 const ContactForm = () => {
-  const [processing, setProcssing] = useState(false);
+  const [processing, setProcessing] = useState(false);
   const options = [
     'Search engine',
     'Recommended by friends or colleague',
@@ -33,6 +33,10 @@ const ContactForm = () => {
     message: false,
     how: false,
   });
+
+  const handleFinish = () => {
+    setProcessing(true);
+  };
 
   const handleInputChange = (
     e: { target: { value: string | any[] } },
@@ -65,6 +69,7 @@ const ContactForm = () => {
           layout="vertical"
           initialValues={{ remember: true }}
           data-testid="form"
+          onFinish={handleFinish}
           requiredMark={false}
           className="w-1/2"
         >
@@ -220,7 +225,7 @@ const ContactForm = () => {
                 <TextArea
                   rows={4}
                   placeholder="Message"
-                  maxLength={6}
+                  maxLength={10}
                   className={`borderless-input ${isFilled.message ? 'filled' : ''}`}
                 />
               </Form.Item>

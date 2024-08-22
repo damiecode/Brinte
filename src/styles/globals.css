@@ -80,114 +80,59 @@ body {
   width: 100%; 
 }
 
-.borderless-input {
-  border: none !important; 
-  outline: none; 
+.borderless-input, .ant-select-selector {
+  width: 100% !important; 
+  height: 56px ; 
+  border-radius: 6px;
   padding: 18px 16px;
-  border-radius: 6px; 
+  background-color: var(--input-bg-light-grey); 
+  border: none; 
+  outline: none; 
   transition: all 0.3s ease; 
-  background-color: var(--input-bg-light-grey);
   color: var(--text-color-grey);
 }
 
-.borderless-input:hover {
-  background-color: var(--input-bg-dark-grey);
+.ant-select-selector {
+  height: 56px !important; 
+}
+
+.borderless-input:hover, .ant-select-selector:hover {
+  background-color: var(--input-bg-dark-grey) !important;
   color: var(--text-color-grey);
 }
 
-.borderless-input:focus-visible {
-  background-color: var(--input-bg-white);
+.borderless-input:focus-visible, .ant-select-selector:focus-visible {
+  background-color: var(--input-bg-white); 
   color: var(--text-color-black);
-  outline: 2px solid var(--primary-color); 
+  outline: 2px solid var(--primary-color);
   box-shadow: 0 0 8px var(--primary-color-light); 
 }
 
-.borderless-input.filled {
-  background-color: var(--input-bg-dark-grey);
+.borderless-input.filled, .ant-select-selector.ant-select-focused {
+  background-color: var(--input-bg-dark-grey) !important;
   color: var(--text-color-black);
 }
 
-.borderless-input:focus-visible.filled {
+.ant-form-item-has-error .borderless-input, .ant-form-item-has-error .ant-select-selector {
   background-color: var(--input-bg-white);
   color: var(--text-color-black);
-}
-
-.ant-form-item-has-error .borderless-input {
-  background-color: var(--input-bg-white);
-  color: var(--text-color-black);
-  outline: 2px solid var(--error-color) !important;
-  box-shadow: 0 0 8px var(--error-color-light) !important; 
-}
-
-.custom-select .ant-select-selector {
-  border: none;
-  background-color: var(--input-bg-light-grey) !important; 
-  border-radius: 6px !important;
-  padding: 18px 16px !important;
-  transition: all 0.3s ease !important;
-  box-shadow: none;
-  height: 56px !important; 
-  display: flex !important;
-  align-items: center !important;
+  border: 1px solid var(--error-color);
+  box-shadow: 0 0 8px var(--error-color-light);
 }
 
 .custom-select .ant-select-dropdown {
-  background-color: var(--input-bg-light-grey) !important; 
-  border-radius: 6px; 
+  background-color: var(--input-bg-light-grey) !important;
+  border-radius: 6px;
 }
 
 .custom-select .ant-select-item-option {
-  background-color: var(--input-bg-light-grey); 
-}
-
-.custom-select .ant-select-selector:hover {
-  background-color: var(--input-bg-dark-grey) !important; 
-  outline: none !important;
-  border: none;
-}
-
-.custom-select .ant-select-selector:focus-visible {
-  background-color: var(--input-bg-white);
-  color: var(--text-color-black);
-  outline: 2px solid var(--primary-color); 
-  box-shadow: 0 0 8px var(--primary-color-light); 
-}
-
-.custom-select .ant-select-selector.ant-select-focused {
-  background-color: var(--input-bg-white) !important; 
-  outline: 2px solid var(--primary-color) !important;
-  box-shadow: 0 0 8px var(--primary-color-light) !important;
-}
-
-.custom-select .ant-select-selector .ant-select-selection-item.ant-select-item-option-selected {
-  color: var(--text-color-black) !important;
-}
-
-.custom-select .ant-form-item-has-error .ant-select-selector {
-  border: 1px solid var(--error-color);
-  box-shadow: 0 0 5px rgba(var(--error-color), 0.7) !important;
-  background-color: var(--input-bg-white); 
-}
-
-.custom-select .ant-form-item-has-error .ant-select-selector .ant-select-selection-item {
-  color: var(--text-color-black); 
-}
-
-.custom-select .ant-select-selector .ant-select-search {
-  padding: 0;
-}
-
-.custom-select .ant-select-selector .ant-select-search-input {
-  padding: 18px 16px !important; 
-  color: var(--text-color-grey);
   background-color: var(--input-bg-light-grey);
-  border: none;
-  border-radius: 6px; 
 }
 
-.custom-select .ant-select-selector .ant-select-search-input:focus {
-  background-color: var(--input-bg-white) !important;
-  color: var(--text-color-black);
-  outline: none;
-  box-shadow: 0 0 8px var(--primary-color-light);
+.custom-select .ant-select-search-input {
+  padding: 18px 16px;
+  color: var(--text-color-grey);
+  background-color: var(--input-bg-light-grey); 
+  border: none; 
+  border-radius: 6px; 
 }
