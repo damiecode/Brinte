@@ -136,3 +136,7 @@ body {
   border: none; 
   border-radius: 6px; 
 }
+
+.rotate-45 {
+  transform: rotate(45deg);
+}

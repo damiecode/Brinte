@@ -5,7 +5,7 @@ import { Button, Image, Tag } from 'antd';
 
 const Navbar: React.FC = () => {
   return (
-    <header className="!bg-white left-0 w-full flex items-center z-1000 justify-between p-4 fixed">
+    <header className="!bg-white left-0 w-full flex items-center z-1000 justify-between p-4 fixed top-0 z-10">
       <div className={`flex items-center space-x-2`}>
         <Image
           src="/images/Logo.png"

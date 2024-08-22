@@ -12,7 +12,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full p-4 bg-[#e0e1e3]  mt-auto">
+    <footer className="w-full p-4 bg-[#e0e1e3] mt-auto">
       <div className="absolute left-1/2 transform -translate-x-1/2">
         <Image src="/images/dots.png" alt="Dot" preview={false} />
       </div>

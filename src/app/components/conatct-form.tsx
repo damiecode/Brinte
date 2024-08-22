@@ -53,7 +53,6 @@ const ContactForm = () => {
       style={{
         padding: '128px 395px',
         gap: '32px',
-        position: 'relative',
         top: '64px',
       }}
     >
