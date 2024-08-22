@@ -11,7 +11,7 @@ import { Card } from 'antd';
 const Resources = () => {
   return (
     <section
-      className="contact-page-container bg-[#F2F2F3] flex items-start justify-between mb-16 -z-10"
+      className="contact-page-container bg-[#F2F2F3] flex items-start justify-between -z-10"
       style={{
         padding: '128px 395px',
         gap: '32px',
@@ -19,7 +19,7 @@ const Resources = () => {
       }}
     >
       <div className="flex flex-col w-full justify-around">
-        <div className="flex flex-col justify-center mb-10">
+        <div className="flex flex-col justify-center mb-10 mx-14">
           <div className="text-[72px] leading-normal w-1/2">
             Helpful resources
           </div>

@@ -49,19 +49,21 @@ const ContactForm = () => {
   };
   return (
     <section
-      className="contact-page-container bg-white flex items-start justify-between"
+      className="contact-page-container bg-white flex items-center justify-center"
       style={{
         padding: '128px 395px',
-        gap: '32px',
         top: '64px',
       }}
     >
-      <div className="flex w-full justify-around">
-        <div className="flex flex-col justify-start">
-          <div className="text-[72px] leading-normal w-1/2">Contact Sales</div>
-          <p className="text-[20px] text-[#5E5E60] w-1/2">
-            Send us a message and we’ll promptly get back to you.
-          </p>
+      <div className="flex mx-24 space-x-20 justify-center">
+        <div className="flex flex-col justify-start items-center">
+          <div className="text-[72px] leading-normal text-balance">
+            Contact <br />
+            Sales
+          </div>
+          <div className="text-[20px] text-[#5E5E60]">
+            Send us a message and we’ll <br /> promptly get back to you.
+          </div>
         </div>
 
         <Form
