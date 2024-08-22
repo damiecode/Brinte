@@ -10,27 +10,27 @@ export default function PageWrapper({
   children: React.ReactNode;
 }) {
   return (
-       <>
-         <ConfigProvider
-          theme={{
-            token: {
-              colorPrimary: '#824FE7',
-              fontFamily: "'Poppins', sans-serif",
+    <>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: '#824FE7',
+            fontFamily: 'PP Telegraf',
+          },
+
+          components: {
+            Button: {
+              borderRadius: 8,
             },
 
-            components: {
-              Button: {
-                borderRadius: 8,
-              },
-
-              Checkbox: {
-                fontSizeLG: 40,
-              },
+            Checkbox: {
+              fontSizeLG: 40,
             },
-          }}
-        >
-          {children}
-        </ConfigProvider>
-       </>
+          },
+        }}
+      >
+        {children}
+      </ConfigProvider>
+    </>
   );
 }
