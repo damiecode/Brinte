@@ -3,95 +3,130 @@
 import React from 'react';
 import { Button, Image } from 'antd';
 import Link from 'next/link';
+import {
+  LinkedinOutlined,
+  SlackOutlined,
+  XOutlined,
+  YoutubeOutlined,
+} from '@ant-design/icons';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#464649]/[0.16] bottom-0 left-0 w-full p-4">
-      <div className="container mx-auto flex flex-wrap items-center justify-around mt-10 mb-32 px-4">
-        <div className="flex items-center space-x-8 -z-10">
+    <footer className="bg-[#464649]/[0.16] bottom-0 left-0 w-full p-4 static">
+      <div className="absolute -top-0 left-1/2 transform -translate-x-1/2">
+        <Image src="/images/dots.png" alt="Dot" preview={false} />
+      </div>
+      <div className="container  flex flex-wrap items-center justify-around mt-10 mx-auto">
+        <div className="-z-10">
           <Image src="/images/Logomark.png" width={30} alt="Logo" />
         </div>
 
-        <div className="flex-grow flex justify-between space-x-2">
-          <div className="flex flex-col items-center mb-6">
-            <h3 className="text-lg font-semibold mb-2">About Us</h3>
-            <ul className="space-y-2">
+        <div className="flex justify-between space-x-20">
+          <div className="flex flex-col items-start mb-6">
+            <h3 className="text-[12px] mb-5 uppercase text-[#909092] font-bold">
+              Resources
+            </h3>
+            <ul className="space-y-5">
               <li>
                 <Link
                   href="/company"
-                  className="text-gray-400 hover:text-white"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
                 >
-                  Company
+                  Products
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="text-gray-400 hover:text-white">
-                  Team
+                <Link
+                  href="/team"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
+                >
+                  Customers
                 </Link>
               </li>
               <li>
                 <Link
                   href="/careers"
-                  className="text-gray-400 hover:text-white"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
                 >
-                  Careers
+                  Docs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
+                >
+                  Our story
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
+                >
+                  Pricing
                 </Link>
               </li>
             </ul>
           </div>
-
-          <div className="flex flex-col items-center mb-6">
-            <h3 className="text-lg font-semibold mb-2">Services</h3>
-            <ul className="space-y-2">
+          <div className="flex flex-col items-start mb-6">
+            <h3 className="text-[12px] mb-5 uppercase text-[#909092] font-bold">
+              Connect with us
+            </h3>
+            <ul className="space-y-5">
               <li>
                 <Link
-                  href="/consulting"
-                  className="text-gray-400 hover:text-white"
+                  href="/company"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
                 >
-                  Consulting
+                  <LinkedinOutlined /> LinkedIn
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/development"
-                  className="text-gray-400 hover:text-white"
+                  href="/team"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
                 >
-                  Development
+                  <XOutlined /> X
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/support"
-                  className="text-gray-400 hover:text-white"
+                  href="/careers"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
                 >
-                  Support
+                  <YoutubeOutlined /> Youtube
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
+                >
+                  <SlackOutlined /> Slack
                 </Link>
               </li>
             </ul>
           </div>
-
           <div className="flex flex-col items-center mb-6">
-            <h3 className="text-lg font-semibold mb-2">Contact</h3>
-            <ul className="space-y-2">
+            <h3 className="text-[12px] mb-5 uppercase text-[#909092] font-bold">
+              Legal
+            </h3>
+            <ul className="space-y-5">
               <li>
                 <Link
-                  href="/contact"
-                  className="text-gray-400 hover:text-white"
+                  href="/company"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
                 >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-gray-400 hover:text-white">
-                  FAQ
+                  Terms
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/support"
-                  className="text-gray-400 hover:text-white"
+                  href="/team"
+                  className="text-[#464649] font-bold text-[13px] hover:text-white"
                 >
-                  Support Center
+                  Privacy
                 </Link>
               </li>
             </ul>
@@ -99,7 +134,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full mt-10 mb-32 flex justify-around">
+      <div className="w-full mt-10 flex mb-32 justify-around">
         <div className="text-[13px] text-[#464649] flex items-center">
           <div className="relative inline-flex items-center justify-center mr-2">
             <div className="w-4 h-4 bg-[#2AAF2A]/[0.40] rounded-full"></div>

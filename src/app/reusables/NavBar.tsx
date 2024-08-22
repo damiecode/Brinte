@@ -17,6 +17,7 @@ const Navbar: React.FC = () => {
         <Tag
           color="processing"
           className="rounded-[24px] text-[8px] font-semibold pt-[5px] pr-[8px] pb-[5px] pl-[8px]"
+          bordered={false}
         >
           BETA
         </Tag>
