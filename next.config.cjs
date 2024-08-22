@@ -1,7 +1,7 @@
 import withLess from 'next-with-less';
 
-/** @type {import('next').NextConfig} */
-const nextConfig = withLess({
+// Define your Next.js configuration using ES module syntax
+const nextConfig = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -17,6 +17,6 @@ const nextConfig = withLess({
   images: {
     domains: [],
   },
-});
+};
 
-export default nextConfig;
+export default withLess(nextConfig);

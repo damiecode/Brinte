@@ -1,7 +1,6 @@
 {
   "name": "brinte",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,6 +15,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "antd": "^5.20.2",
     "next": "14.2.5",
     "next-with-less": "^3.0.1",
