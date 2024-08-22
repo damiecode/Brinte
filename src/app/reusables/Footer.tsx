@@ -12,13 +12,18 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#464649]/[0.16] bottom-0 left-0 w-full p-4 static">
-      <div className="absolute -top-0 left-1/2 transform -translate-x-1/2">
+    <footer className="w-full p-4 bg-[#e0e1e3]  mt-auto">
+      <div className="absolute left-1/2 transform -translate-x-1/2">
         <Image src="/images/dots.png" alt="Dot" preview={false} />
       </div>
-      <div className="container  flex flex-wrap items-center justify-around mt-10 mx-auto">
-        <div className="-z-10">
-          <Image src="/images/Logomark.png" width={30} alt="Logo" />
+      <div className="container flex flex-wrap items-center justify-around mt-10 mx-auto">
+        <div>
+          <Image
+            src="/images/Logomark.png"
+            width={30}
+            alt="Logo"
+            preview={false}
+          />
         </div>
 
         <div className="flex justify-between space-x-20">
@@ -134,7 +139,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full mt-10 flex mb-32 justify-around">
+      <div className="w-full mt-10 flex mb-32 justify-around ">
         <div className="text-[13px] text-[#464649] flex items-center">
           <div className="relative inline-flex items-center justify-center mr-2">
             <div className="w-4 h-4 bg-[#2AAF2A]/[0.40] rounded-full"></div>

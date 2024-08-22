@@ -5,7 +5,7 @@ import { Button, Image, Tag } from 'antd';
 
 const Resources: React.FC = () => {
   return (
-    <section className="flex flex-col items-center justify-center text-center px-4 md:px-8 lg:px-16">
+    <section className="bg-[#F2F2F3] flex flex-col items-center justify-center text-center overflow-auto">
       <div>Helpful Resources</div>
       <div>Helpful Resources</div>
       <div>Helpful Resources</div>

@@ -53,3 +53,28 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-input {
+  width: 147px;
+  height: 56px;
+  border-radius: 6px;
+  padding: 18px 16px;
+  gap: 2px;
+}
+
+.custom-input::placeholder {
+  color: #B0B0B0; 
+  opacity: 1; 
+}
+
+.ant-form-item-control-input-content .custom-input {
+  width: 100%; 
+}
+
+.borderless-input {
+  border: none !important; 
+  box-shadow: none !important; 
+  outline: none; 
+  padding: 18px 16px; 
+  border-radius: 6px; 
+}
