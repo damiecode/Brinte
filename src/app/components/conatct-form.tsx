@@ -1,9 +1,48 @@
 'use client';
 
-import { Button, Col, Dropdown, Form, Input, Row } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import {
+  Button,
+  Col,
+  Dropdown,
+  Form,
+  Input,
+  MenuProps,
+  Row,
+  Select,
+} from 'antd';
 import TextArea from 'antd/es/input/TextArea';
+import { useState } from 'react';
 
 const ContactForm = () => {
+  const [processing, setProcssing] = useState(false);
+  const options = [
+    'Search engine',
+    'Recommended by friends or colleague',
+    'Social media',
+    'Blog or publication',
+    'Others',
+  ];
+
+  const [isFilled, setIsFilled] = useState({
+    firstName: false,
+    lastName: false,
+    email: false,
+    companyName: false,
+    url: false,
+    message: false,
+    how: false,
+  });
+
+  const handleInputChange = (
+    e: { target: { value: string | any[] } },
+    field: any,
+  ) => {
+    setIsFilled((prevState) => ({
+      ...prevState,
+      [field]: e.target.value.length > 0,
+    }));
+  };
   return (
     <section
       className="contact-page-container bg-white flex items-start justify-between"
@@ -44,8 +83,9 @@ const ContactForm = () => {
                 <Input
                   size="large"
                   type="text"
-                  className="borderless-input bg-[#F2F2F3]"
+                  className={`borderless-input ${isFilled.firstName ? 'filled' : ''}`}
                   placeholder="First name"
+                  onChange={(e) => handleInputChange(e, 'firstName')}
                 />
               </Form.Item>
             </Col>
@@ -63,8 +103,9 @@ const ContactForm = () => {
                 <Input
                   size="large"
                   type="text"
-                  className="borderless-input bg-[#F2F2F3]"
+                  className={`borderless-input ${isFilled.lastName ? 'filled' : ''}`}
                   placeholder="Last name"
+                  onChange={(e) => handleInputChange(e, 'lastName')}
                 />
               </Form.Item>
             </Col>
@@ -88,7 +129,8 @@ const ContactForm = () => {
                   placeholder="Email"
                   size="large"
                   type="email"
-                  className="borderless-input bg-[#F2F2F3]"
+                  className={`borderless-input ${isFilled.email ? 'filled' : ''}`}
+                  onChange={(e) => handleInputChange(e, 'email')}
                 />
               </Form.Item>
             </Col>
@@ -107,7 +149,8 @@ const ContactForm = () => {
                   placeholder="Company name"
                   size="large"
                   type="text"
-                  className="borderless-input bg-[#F2F2F3]"
+                  onChange={(e) => handleInputChange(e, 'companyName')}
+                  className={`borderless-input ${isFilled.companyName ? 'filled' : ''}`}
                 />
               </Form.Item>
             </Col>
@@ -126,36 +169,43 @@ const ContactForm = () => {
                   placeholder="Website URL"
                   size="large"
                   type="text"
-                  className="borderless-input bg-[#F2F2F3]"
+                  onChange={(e) => handleInputChange(e, 'url')}
+                  className={`borderless-input ${isFilled.url ? 'filled' : ''}`}
                 />
               </Form.Item>
             </Col>
 
             <Col span={24}>
-              <Dropdown
-                menu={{}}
-                placement="bottomLeft"
-                arrow
-                trigger={['hover']}
+              <Form.Item
+                name="how"
+                label="How did you find us?"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please select an option',
+                  },
+                ]}
+                className="custom-select"
               >
-                <Form.Item
-                  name="how"
-                  label="How did you find us?"
-                  rules={[
-                    {
-                      required: true,
-                      message: 'Please select an option',
-                    },
-                  ]}
-                >
-                  <Input
-                    size="large"
-                    placeholder="How did you find us?"
-                    className="borderless-input bg-[#F2F2F3]"
-                  />
-                </Form.Item>
-              </Dropdown>
+                <Select
+                  showSearch
+                  size="large"
+                  placeholder="How did you find us?"
+                  suffixIcon={
+                    <DownOutlined className="flex justify-center items-center" />
+                  }
+                  className={`custom-select ${isFilled.how ? 'filled' : ''}`}
+                  onChange={(value) =>
+                    handleInputChange({ target: { value } }, 'how')
+                  }
+                  options={options.map((option) => ({
+                    value: option,
+                    label: option,
+                  }))}
+                />
+              </Form.Item>
             </Col>
+
             <Col span={24}>
               <Form.Item
                 label="Message"
@@ -171,14 +221,19 @@ const ContactForm = () => {
                   rows={4}
                   placeholder="Message"
                   maxLength={6}
-                  className="borderless-input bg-[#F2F2F3]"
+                  className={`borderless-input ${isFilled.message ? 'filled' : ''}`}
                 />
               </Form.Item>
             </Col>
           </Row>
 
-          <Button type="primary" size="large" htmlType="submit">
-            Contact sales
+          <Button
+            type="primary"
+            size="large"
+            htmlType="submit"
+            loading={processing}
+          >
+            {processing ? `sending message...` : `Contact sales`}
           </Button>
         </Form>
       </div>
