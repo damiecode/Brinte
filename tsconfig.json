@@ -31,7 +31,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/**/*",
-    "commitlint.config.js"
+    "commitlint.config.js",
+    "public/sw.js"
   ],
   "exclude": ["node_modules", "dist"]
 }

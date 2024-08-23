@@ -21,6 +21,12 @@ export default function RootLayout({
         <link rel="icon" href="/images/Logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" href="/Logo.png" />
+        <link
+          rel="preload"
+          href="/fonts/pp-telegraf.woff"
+          as="font"
+          type="font/woff"
+        />
         <script src="https://js.paystack.co/v2/inline.js" async></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

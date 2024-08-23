@@ -1,6 +1,6 @@
 import withLess from 'next-with-less';
+import withPWA from 'next-pwa';
 
-// Define your Next.js configuration using ES module syntax
 const nextConfig = {
   webpack(config) {
     config.module.rules.push({
@@ -18,6 +18,12 @@ const nextConfig = {
   images: {
     domains: [],
   },
+  pwa: {
+    dest: 'public',
+    // Optional settings
+    register: true,
+    skipWaiting: true,
+  },
 };
 
-export default withLess(nextConfig);
+export default withPWA(withLess(nextConfig));

@@ -140,3 +140,18 @@ body {
 .rotate-45 {
   transform: rotate(45deg);
 }
+
+
+@media (max-width: 768px) {
+  .custom-select .ant-select-selection-item {
+    font-size: 14px; 
+  }
+
+  .custom-select-dropdown {
+    max-width: 90vw; 
+  }
+
+  .borderless-input {
+    font-size: 14px; 
+  }
+}

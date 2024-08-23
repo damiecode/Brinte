@@ -35,7 +35,7 @@
       }
     }
   },
-  "ignorePatterns": ["next.config.cjs"],
+  "ignorePatterns": ["next.config.cjs", "public/sw.js"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "off",

@@ -4,29 +4,19 @@ import { Image } from 'antd';
 
 const SuccessMessage = () => {
   return (
-    <section
-      className="contact-page-container bg-white flex items-start justify-between"
-      style={{
-        padding: '128px 395px',
-        gap: '32px',
-        position: 'relative',
-        top: '64px',
-      }}
-    >
-      <div className="flex w-full justify-around">
-        <div className="flex flex-col justify-start items-center">
-          <div className="text-[72px] leading-normal text-balance">
-            Thank you
-          </div>
-          <div className="text-[20px] text-[#5E5E60]">
-            A member of our team will be in touch <br /> with you shortly
-          </div>
+    <div className="flex flex-col md:flex-row justify-center md:justify-around md:space-x-20 lg:space-x-10 space-y-10 md:space-y-0 ">
+      <div className="flex flex-col justify-center md:justify-start items-center">
+        <div className="text-[40px] md:text-[72px] leading-normal text-balance">
+          Thank you
         </div>
-        <div className="mx-14">
-          <Image src="/images/Success.png" alt="Success" preview={false} />
+        <div className="text-[12px] mb-3 md:mb-0 md:text-[20px] text-[#5E5E60] font-light">
+          A member of our team will be in touch <br /> with you shortly
         </div>
       </div>
-    </section>
+      <div className="flex justify-center w-full sm:w-[160px] sm:h-[160px] md:w-[240px] md:h-[240px] lg:mx-14">
+        <Image src="/images/Success.png" alt="Success" preview={false} />
+      </div>
+    </div>
   );
 };
 
