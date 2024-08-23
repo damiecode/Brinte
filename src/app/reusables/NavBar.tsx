@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Button, Image, Tag } from 'antd';
+import LazyLoad from 'react-lazyload';
 import '@/styles/navbar.css';
 
 const Navbar: React.FC = () => {
@@ -24,13 +25,15 @@ const Navbar: React.FC = () => {
   return (
     <header className="bg-white left-0 w-full flex items-center z-50 justify-between p-4 fixed top-0">
       <div className={`flex items-center space-x-2`}>
-        <Image
-          src="/images/Logo.png"
-          alt="Logo"
-          width={96}
-          height={24}
-          preview={false}
-        />
+        <LazyLoad height={24} offset={100}>
+          <Image
+            src="/images/Logo.png"
+            alt="Logo"
+            width={96}
+            height={24}
+            preview={false}
+          />
+        </LazyLoad>
         <Tag
           color="processing"
           className="rounded-[24px] text-[8px] font-semibold pt-[5px] pr-[8px] pb-[5px] pl-[8px]"

@@ -1,6 +1,7 @@
 'use client';
 
 import { Image } from 'antd';
+import LazyLoad from 'react-lazyload';
 
 const SuccessMessage = () => {
   return (
@@ -14,7 +15,9 @@ const SuccessMessage = () => {
         </div>
       </div>
       <div className="flex justify-center w-full sm:w-[160px] sm:h-[160px] md:w-[240px] md:h-[240px] lg:mx-14">
-        <Image src="/images/Success.png" alt="Success" preview={false} />
+        <LazyLoad offset={100}>
+          <Image src="/images/Success.png" alt="Success" preview={false} />
+        </LazyLoad>
       </div>
     </div>
   );

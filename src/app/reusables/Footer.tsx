@@ -10,21 +10,26 @@ import {
   YoutubeOutlined,
 } from '@ant-design/icons';
 import '@/styles/navbar.css';
+import LazyLoad from 'react-lazyload';
 
 const Footer: React.FC = () => {
   return (
     <footer className="w-full p-4 bg-[#e0e1e3] mt-auto">
       <div className="absolute left-1/2 transform -translate-x-1/2">
-        <Image src="/images/dots.png" alt="Dot" preview={false} />
+        <LazyLoad offset={100}>
+          <Image src="/images/dots.png" alt="Dot" preview={false} />
+        </LazyLoad>
       </div>
       <div className="container flex flex-col md:flex-row md:flex-wrap items-center justify-around mt-10 mx-auto">
         <div className="flex justify-center lg:block mb-10 md:mb-0">
-          <Image
-            src="/images/Logomark.png"
-            width={30}
-            alt="Logo"
-            preview={false}
-          />
+          <LazyLoad offset={100}>
+            <Image
+              src="/images/Logomark.png"
+              width={30}
+              alt="Logo"
+              preview={false}
+            />
+          </LazyLoad>
         </div>
 
         <div className="flex flex-col md:flex-row justify-center md:justify-between space-y-10 md:space-y-0 md:space-x-20">
@@ -153,7 +158,9 @@ const Footer: React.FC = () => {
         </p>
       </div>
       <div className="lg:mx-14">
-        <Image src="/images/Wordmark.png" alt="Logo" preview={false} />
+        <LazyLoad offset={100}>
+          <Image src="/images/Wordmark.png" alt="Logo" preview={false} />
+        </LazyLoad>
       </div>
     </footer>
   );

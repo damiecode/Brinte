@@ -1,0 +1,11 @@
+{
+    "version": "0.1",
+    "words": [
+      "LazyLoad",
+      "react-lazyload"
+    ],
+    "ignorePaths": [
+      "node_modules/**"
+    ]
+  }
+  
