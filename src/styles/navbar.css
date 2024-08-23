@@ -1,0 +1,53 @@
+/* navbar.css */
+.navbar-button {
+    background-color: transparent;
+    border: none;
+    color: #101010;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .navbar-button:focus{
+    color: #464649 !important; 
+    background-color: transparent !important;
+  }
+  
+  .navbar-button:hover {
+    color: #909092 !important; 
+    background-color: transparent !important;
+  }
+
+  .navbar-button:active {
+    color: #404040 !important; 
+    background-color: transparent !important; 
+  }
+
+  .navbar-primary-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .navbar-primary-button:hover {
+    background-color: #303032; /* Slightly lighter background color */
+    color: white; /* Ensure the text color remains white */
+  }
+
+  .navbar-primary-button:focus {
+    background-color: #303032; /* Slightly lighter background color */
+    color: white; /* Ensure the text color remains white */
+  }
+
+  .navbar-primary-button:active {
+    background-color: #303032; /* Slightly lighter background color */
+    color: white; /* Ensure the text color remains white */
+  }
+  
+  .navbar-primary-button:disabled {
+    background-color: #E6E6E7;
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  

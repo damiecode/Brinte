@@ -6,6 +6,7 @@ import {
   Col,
   Dropdown,
   Form,
+  Image,
   Input,
   MenuProps,
   Row,
@@ -13,6 +14,7 @@ import {
 } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { useState } from 'react';
+import CustomSpinner from '../reusables/LoadinIngdicator';
 
 const ContactForm = () => {
   const [processing, setProcessing] = useState(false);
@@ -237,6 +239,7 @@ const ContactForm = () => {
             type="primary"
             size="large"
             htmlType="submit"
+            icon={processing ? <CustomSpinner /> : null}
             loading={processing}
           >
             {processing ? `sending message...` : `Contact sales`}
