@@ -1,12 +1,23 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Image, Tag } from 'antd';
 import '@/styles/navbar.css';
 
 const Navbar: React.FC = () => {
+  const [activeNav, setActiveNav] = useState('Contact');
+
+  const navItems = [
+    'Products',
+    'Customers',
+    'Docs',
+    'Our Story',
+    'Pricing',
+    'Contact',
+  ];
+
   return (
-    <header className="bg-white left-0 w-full flex items-center z-1000 justify-between p-4 fixed top-0">
+    <header className="bg-white left-0 w-full flex items-center z-50 justify-between p-4 fixed top-0">
       <div className={`flex items-center space-x-2`}>
         <Image
           src="/images/Logo.png"
@@ -25,15 +36,16 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="items-center space-x-4 text-[#101010]">
-        {[
-          'Products',
-          'Customers',
-          'Docs',
-          'Our Story',
-          'Pricing',
-          'Contact',
-        ].map((text) => (
-          <Button key={text} type="link" href="#" className="navbar-button">
+        {navItems.map((text) => (
+          <Button
+            key={text}
+            type="link"
+            href="#"
+            className={`navbar-button ${
+              activeNav === text ? 'active-nav' : 'inactive-nav'
+            }`}
+            onClick={() => setActiveNav(text)}
+          >
             {text}
           </Button>
         ))}

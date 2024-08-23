@@ -31,23 +31,34 @@
   }
   
   .navbar-primary-button:hover {
-    background-color: #303032; /* Slightly lighter background color */
-    color: white; /* Ensure the text color remains white */
+    background-color: #303032 !important; 
+    color: white !important; 
+  }
+
+  .active-nav {
+    color: #000000; 
+    font-weight: bold; 
+  }
+  
+  .inactive-nav {
+    color: #909092;
+    pointer-events: none; 
+    opacity: 0.5; 
   }
 
   .navbar-primary-button:focus {
-    background-color: #303032; /* Slightly lighter background color */
-    color: white; /* Ensure the text color remains white */
+    background-color: #303032 !important;
+    color: white !important; 
   }
 
   .navbar-primary-button:active {
-    background-color: #303032; /* Slightly lighter background color */
-    color: white; /* Ensure the text color remains white */
+    background-color: #202022 !important; 
+    color: white !important; 
   }
   
   .navbar-primary-button:disabled {
-    background-color: #E6E6E7;
-    color: #ccc;
+    background-color: #E6E6E7 !important;
+    color: #ccc !important;
     cursor: not-allowed;
   }
   

@@ -9,6 +9,7 @@ import {
   XOutlined,
   YoutubeOutlined,
 } from '@ant-design/icons';
+import '@/styles/navbar.css';
 
 const Footer: React.FC = () => {
   return (

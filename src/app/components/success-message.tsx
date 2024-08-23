@@ -14,11 +14,13 @@ const SuccessMessage = () => {
       }}
     >
       <div className="flex w-full justify-around">
-        <div className="flex flex-col justify-start">
-          <div className="text-[72px] leading-normal w-1/2">Thank you</div>
-          <p className="text-[20px] text-[#5E5E60] w-1/2">
-            A member of our team will be in touch with you shortly.
-          </p>
+        <div className="flex flex-col justify-start items-center">
+          <div className="text-[72px] leading-normal text-balance">
+            Thank you
+          </div>
+          <div className="text-[20px] text-[#5E5E60]">
+            A member of our team will be in touch <br /> with you shortly
+          </div>
         </div>
         <div className="mx-14">
           <Image src="/images/Success.png" alt="Success" preview={false} />
