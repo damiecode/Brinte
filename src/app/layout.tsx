@@ -29,11 +29,7 @@ export default function RootLayout({
         />
         <script src="https://js.paystack.co/v2/inline.js" async></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          //   crossOrigin
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
       </head>
       <body>
         <div id="root">

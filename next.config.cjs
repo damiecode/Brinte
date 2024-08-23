@@ -20,7 +20,7 @@ const nextConfig = {
   },
   pwa: {
     dest: 'public',
-    // Optional settings
+
     register: true,
     skipWaiting: true,
   },

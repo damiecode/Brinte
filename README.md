@@ -1,6 +1,6 @@
 # 🚀 My Front-End Engineer Takehome Project
 
-Hey there! 👋 I’m excited to present my take-home project. 🎉 This project showcases my skills in front-end development by creating a beautiful and functional one-page design. Let’s dive in! 🏊‍♂️
+Hi! 👋 I’m excited to present my take-home project. 🎉 This project showcases my skills in front-end development by creating a beautiful and functional one-page design. Let’s dive in! 🏊‍♂️
 
 ## 🎯 Project Overview
 

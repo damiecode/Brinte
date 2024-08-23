@@ -59,8 +59,6 @@ export default [
       'prefer-const': 'warn',
       '@typescript-eslint/no-misused-promises': 'off',
       '@typescript-eslint/no-empty-function': 'warn',
-      // Removed or replaced the rule if it's unsupported
-      // '@typescript-eslint/ban-types': 'warn', // Remove or find alternative
       'import/no-unresolved': 'off',
       'import/no-named-as-default-member': 'off',
       'import/namespace': 'off',
